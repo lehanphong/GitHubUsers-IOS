@@ -24,6 +24,8 @@
 		CCADCD902D96E35200C0A2DA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD8F2D96E35200C0A2DA /* CoreDataManager.swift */; };
 		CCADCD932D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD912D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld */; };
 		CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */; };
+		CCADCD992D96F9E200C0A2DA /* DetailUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD972D96F9E200C0A2DA /* DetailUserViewModel.swift */; };
+		CCADCD9A2D96F9E200C0A2DA /* DetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD982D96F9E200C0A2DA /* DetailUserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		CCADCD8F2D96E35200C0A2DA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		CCADCD922D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubUsersCoreData.xcdatamodel; sourceTree = "<group>"; };
 		CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAsyncImage.swift; sourceTree = "<group>"; };
+		CCADCD972D96F9E200C0A2DA /* DetailUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUserViewModel.swift; sourceTree = "<group>"; };
+		CCADCD982D96F9E200C0A2DA /* DetailUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,8 @@
 		CCADCD8B2D968C1700C0A2DA /* users */ = {
 			isa = PBXGroup;
 			children = (
+				CCADCD982D96F9E200C0A2DA /* DetailUserView.swift */,
+				CCADCD972D96F9E200C0A2DA /* DetailUserViewModel.swift */,
 				CCADCD892D968C1700C0A2DA /* UsersView.swift */,
 				CCADCD8A2D968C1700C0A2DA /* UsersViewModel.swift */,
 			);
@@ -359,11 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCADCD992D96F9E200C0A2DA /* DetailUserViewModel.swift in Sources */,
 				CCADCD8E2D968C1700C0A2DA /* UsersViewModel.swift in Sources */,
 				CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */,
 				CCADCD7A2D96765C00C0A2DA /* APIManager.swift in Sources */,
 				CCADCD802D967D6300C0A2DA /* UserRepository.swift in Sources */,
 				CCADCD862D967F5800C0A2DA /* UserDAO.swift in Sources */,
+				CCADCD9A2D96F9E200C0A2DA /* DetailUserView.swift in Sources */,
 				CCADCD932D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld in Sources */,
 				CCADCD872D967F5800C0A2DA /* UserEntity.swift in Sources */,
 				CCADCD8D2D968C1700C0A2DA /* UsersView.swift in Sources */,
