@@ -6,27 +6,15 @@
 //
 
 import SwiftUI
-import SwiftData
+import CoreData
 
 @main
 struct GitHubUsersApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let userRepository = UserRepositoryImpl(apiManager: APIManagerImpl.shared, userDAO: UserDAOImpl.shared)
+            let usersViewModel = UsersViewModel(repository: userRepository)
+            UsersView(viewModel: usersViewModel)
         }
-        .modelContainer(sharedModelContainer)
     }
 }

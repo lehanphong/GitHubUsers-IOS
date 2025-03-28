@@ -88,6 +88,7 @@ class APIManagerImpl : APIManager {
 
         do {
             let decodedData = try JSONDecoder().decode(T.self, from: data)
+            DLog.d("APIManager \(decodedData)")
             return decodedData
         } catch {
             throw APIError.decodingError(error)
@@ -98,22 +99,27 @@ class APIManagerImpl : APIManager {
 // impl APIManager
 extension APIManagerImpl {
     func get<T: Decodable>(url: URL, headers: [String: String]? = nil) async throws -> T {
+        DLog.i("GET \(url) \(String(describing: headers))")
         return try await fetchData(url: url, method: .get, headers: headers)
     }
 
     func post<T: Decodable>(url: URL, body: Data?, headers: [String: String]? = nil) async throws -> T {
+        DLog.i("POST \(url) \(String(describing: headers))")
         return try await fetchData(url: url, method: .post, body: body, headers: headers)
     }
 
     func put<T: Decodable>(url: URL, body: Data?, headers: [String: String]? = nil) async throws -> T {
+        DLog.i("PUT \(url) \(String(describing: headers))")
         return try await fetchData(url: url, method: .put, body: body, headers: headers)
     }
 
     func patch<T: Decodable>(url: URL, body: Data?, headers: [String: String]? = nil) async throws -> T {
+        DLog.i("PATCH \(url) \(String(describing: headers))")
         return try await fetchData(url: url, method: .patch, body: body, headers: headers)
     }
 
     func delete<T: Decodable>(url: URL, headers: [String: String]? = nil) async throws -> T {
+        DLog.i("DELETE \(url) \(String(describing: headers))")
         return try await fetchData(url: url, method: .delete, headers: headers)
     }
 }

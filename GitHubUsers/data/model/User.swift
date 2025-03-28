@@ -1,6 +1,7 @@
 import Foundation
 
 struct User: Decodable, Identifiable {
+    let rowId: String = UUID().uuidString
     let login: String
     let id: Int
     let avatarUrl: String
@@ -18,4 +19,9 @@ struct User: Decodable, Identifiable {
         case followers
         case following
     }
-} 
+    
+    func hasDetailInfo() -> Bool {
+        return location != nil && (followers ?? 0) > 0 && (following ?? 0) > 0
+    }
+    
+}

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CC73C4352D965C52006A6796 /* GitHubUsersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73C4342D965C52006A6796 /* GitHubUsersApp.swift */; };
-		CC73C4372D965C52006A6796 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73C4362D965C52006A6796 /* ContentView.swift */; };
-		CC73C4392D965C52006A6796 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73C4382D965C52006A6796 /* Item.swift */; };
 		CC73C43B2D965C53006A6796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC73C43A2D965C53006A6796 /* Assets.xcassets */; };
 		CC73C43E2D965C53006A6796 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC73C43D2D965C53006A6796 /* Preview Assets.xcassets */; };
 		CC73C4482D965C53006A6796 /* GitHubUsersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC73C4472D965C53006A6796 /* GitHubUsersTests.swift */; };
@@ -19,6 +17,13 @@
 		CCADCD7D2D9676E400C0A2DA /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD7C2D9676E400C0A2DA /* DLog.swift */; };
 		CCADCD802D967D6300C0A2DA /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD7F2D967D6300C0A2DA /* UserRepository.swift */; };
 		CCADCD832D967D7C00C0A2DA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD812D967D7C00C0A2DA /* User.swift */; };
+		CCADCD862D967F5800C0A2DA /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD842D967F5800C0A2DA /* UserDAO.swift */; };
+		CCADCD872D967F5800C0A2DA /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD852D967F5800C0A2DA /* UserEntity.swift */; };
+		CCADCD8D2D968C1700C0A2DA /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD892D968C1700C0A2DA /* UsersView.swift */; };
+		CCADCD8E2D968C1700C0A2DA /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD8A2D968C1700C0A2DA /* UsersViewModel.swift */; };
+		CCADCD902D96E35200C0A2DA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD8F2D96E35200C0A2DA /* CoreDataManager.swift */; };
+		CCADCD932D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD912D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld */; };
+		CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +46,6 @@
 /* Begin PBXFileReference section */
 		CC73C4312D965C52006A6796 /* GitHubUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC73C4342D965C52006A6796 /* GitHubUsersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubUsersApp.swift; sourceTree = "<group>"; };
-		CC73C4362D965C52006A6796 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CC73C4382D965C52006A6796 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CC73C43A2D965C53006A6796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC73C43D2D965C53006A6796 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC73C4432D965C53006A6796 /* GitHubUsersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitHubUsersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +57,13 @@
 		CCADCD7C2D9676E400C0A2DA /* DLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
 		CCADCD7F2D967D6300C0A2DA /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		CCADCD812D967D7C00C0A2DA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CCADCD842D967F5800C0A2DA /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		CCADCD852D967F5800C0A2DA /* UserEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		CCADCD892D968C1700C0A2DA /* UsersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
+		CCADCD8A2D968C1700C0A2DA /* UsersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		CCADCD8F2D96E35200C0A2DA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CCADCD922D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubUsersCoreData.xcdatamodel; sourceTree = "<group>"; };
+		CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +114,12 @@
 		CC73C4332D965C52006A6796 /* GitHubUsers */ = {
 			isa = PBXGroup;
 			children = (
+				CCADCD882D96838E00C0A2DA /* ui */,
 				CCADCD7B2D9676D200C0A2DA /* utils */,
 				CCADCD762D96763B00C0A2DA /* data */,
 				CC73C4342D965C52006A6796 /* GitHubUsersApp.swift */,
-				CC73C4362D965C52006A6796 /* ContentView.swift */,
-				CC73C4382D965C52006A6796 /* Item.swift */,
 				CC73C43A2D965C53006A6796 /* Assets.xcassets */,
+				CCADCD912D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld */,
 				CC73C43C2D965C53006A6796 /* Preview Content */,
 			);
 			path = GitHubUsers;
@@ -154,6 +164,9 @@
 		CCADCD772D96764B00C0A2DA /* local */ = {
 			isa = PBXGroup;
 			children = (
+				CCADCD842D967F5800C0A2DA /* UserDAO.swift */,
+				CCADCD852D967F5800C0A2DA /* UserEntity.swift */,
+				CCADCD8F2D96E35200C0A2DA /* CoreDataManager.swift */,
 			);
 			path = local;
 			sourceTree = "<group>";
@@ -188,6 +201,32 @@
 				CCADCD812D967D7C00C0A2DA /* User.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		CCADCD882D96838E00C0A2DA /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCD942D96F47B00C0A2DA /* customs */,
+				CCADCD8B2D968C1700C0A2DA /* users */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		CCADCD8B2D968C1700C0A2DA /* users */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCD892D968C1700C0A2DA /* UsersView.swift */,
+				CCADCD8A2D968C1700C0A2DA /* UsersViewModel.swift */,
+			);
+			path = users;
+			sourceTree = "<group>";
+		};
+		CCADCD942D96F47B00C0A2DA /* customs */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */,
+			);
+			path = customs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,12 +359,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCADCD8E2D968C1700C0A2DA /* UsersViewModel.swift in Sources */,
+				CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */,
 				CCADCD7A2D96765C00C0A2DA /* APIManager.swift in Sources */,
-				CC73C4372D965C52006A6796 /* ContentView.swift in Sources */,
 				CCADCD802D967D6300C0A2DA /* UserRepository.swift in Sources */,
+				CCADCD862D967F5800C0A2DA /* UserDAO.swift in Sources */,
+				CCADCD932D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld in Sources */,
+				CCADCD872D967F5800C0A2DA /* UserEntity.swift in Sources */,
+				CCADCD8D2D968C1700C0A2DA /* UsersView.swift in Sources */,
 				CCADCD7D2D9676E400C0A2DA /* DLog.swift in Sources */,
-				CC73C4392D965C52006A6796 /* Item.swift in Sources */,
 				CC73C4352D965C52006A6796 /* GitHubUsersApp.swift in Sources */,
+				CCADCD902D96E35200C0A2DA /* CoreDataManager.swift in Sources */,
 				CCADCD832D967D7C00C0A2DA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +542,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +572,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -656,6 +702,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCADCD912D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCADCD922D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodel */,
+			);
+			currentVersion = CCADCD922D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodel */;
+			name = GitHubUsersCoreData.xcdatamodeld;
+			path = /Volumes/Work/demo_project/1.Learn/TymeX/GitHubUsers/GitHubUsers/GitHubUsersCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC73C4292D965C52006A6796 /* Project object */;
 }
