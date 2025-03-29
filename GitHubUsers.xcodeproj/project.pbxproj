@@ -26,6 +26,12 @@
 		CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */; };
 		CCADCD992D96F9E200C0A2DA /* DetailUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD972D96F9E200C0A2DA /* DetailUserViewModel.swift */; };
 		CCADCD9A2D96F9E200C0A2DA /* DetailUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD982D96F9E200C0A2DA /* DetailUserView.swift */; };
+		CCADCD9C2D970F6800C0A2DA /* DetailUserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD9B2D970F6800C0A2DA /* DetailUserViewModelTests.swift */; };
+		CCADCD9E2D97104400C0A2DA /* UsersViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD9D2D97104400C0A2DA /* UsersViewModelTests.swift */; };
+		CCADCDA02D97108300C0A2DA /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCD9F2D97108300C0A2DA /* MockUserRepository.swift */; };
+		CCADCDA42D97944300C0A2DA /* MockUserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDA32D97944300C0A2DA /* MockUserDAO.swift */; };
+		CCADCDA92D9794FB00C0A2DA /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDA82D9794FB00C0A2DA /* MockApiManager.swift */; };
+		CCADCDAB2D97981500C0A2DA /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDAA2D97981500C0A2DA /* UserRepositoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAsyncImage.swift; sourceTree = "<group>"; };
 		CCADCD972D96F9E200C0A2DA /* DetailUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUserViewModel.swift; sourceTree = "<group>"; };
 		CCADCD982D96F9E200C0A2DA /* DetailUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailUserView.swift; sourceTree = "<group>"; };
+		CCADCD9B2D970F6800C0A2DA /* DetailUserViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUserViewModelTests.swift; sourceTree = "<group>"; };
+		CCADCD9D2D97104400C0A2DA /* UsersViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModelTests.swift; sourceTree = "<group>"; };
+		CCADCD9F2D97108300C0A2DA /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
+		CCADCDA32D97944300C0A2DA /* MockUserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDAO.swift; sourceTree = "<group>"; };
+		CCADCDA82D9794FB00C0A2DA /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		CCADCDAA2D97981500C0A2DA /* UserRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRepositoryTests.swift; path = GitHubUsersTests/repositories/UserRepositoryTests.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				CC73C4472D965C53006A6796 /* GitHubUsersTests.swift */,
+				CCADCDAC2D9798DD00C0A2DA /* repositories */,
+				CCADCDA22D978E3400C0A2DA /* mocks */,
+				CCADCDA12D978E2600C0A2DA /* viewmodels */,
 			);
 			path = GitHubUsersTests;
 			sourceTree = "<group>";
@@ -233,6 +248,33 @@
 				CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */,
 			);
 			path = customs;
+			sourceTree = "<group>";
+		};
+		CCADCDA12D978E2600C0A2DA /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCD9B2D970F6800C0A2DA /* DetailUserViewModelTests.swift */,
+				CCADCD9D2D97104400C0A2DA /* UsersViewModelTests.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		CCADCDA22D978E3400C0A2DA /* mocks */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCD9F2D97108300C0A2DA /* MockUserRepository.swift */,
+				CCADCDA32D97944300C0A2DA /* MockUserDAO.swift */,
+				CCADCDA82D9794FB00C0A2DA /* MockApiManager.swift */,
+			);
+			path = mocks;
+			sourceTree = "<group>";
+		};
+		CCADCDAC2D9798DD00C0A2DA /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CCADCDAA2D97981500C0A2DA /* UserRepositoryTests.swift */,
+			);
+			path = repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,7 +428,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCADCDA02D97108300C0A2DA /* MockUserRepository.swift in Sources */,
+				CCADCD9C2D970F6800C0A2DA /* DetailUserViewModelTests.swift in Sources */,
+				CCADCD9E2D97104400C0A2DA /* UsersViewModelTests.swift in Sources */,
 				CC73C4482D965C53006A6796 /* GitHubUsersTests.swift in Sources */,
+				CCADCDA42D97944300C0A2DA /* MockUserDAO.swift in Sources */,
+				CCADCDAB2D97981500C0A2DA /* UserRepositoryTests.swift in Sources */,
+				CCADCDA92D9794FB00C0A2DA /* MockApiManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

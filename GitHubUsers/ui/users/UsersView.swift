@@ -62,7 +62,7 @@ struct UserRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
-                if let url = URL(string: user.avatarUrl) {
+                if let url = URL(string: user.avatarUrl), !user.avatarUrl.isEmpty {
                     DAsyncImage(url: url)
                         .frame(width: 96, height: 96)
                         .clipShape(Circle())
@@ -88,7 +88,7 @@ struct UserRow: View {
                         .foregroundColor(.blue.opacity(0.8))
                     Spacer()
                 }
-                .frame(height: .infinity, alignment: Alignment.top)
+                .frame(maxHeight: .infinity, alignment: .top)
                 
                 Spacer()
             }

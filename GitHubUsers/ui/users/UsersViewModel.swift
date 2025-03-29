@@ -30,8 +30,21 @@ class UsersViewModel: ObservableObject {
                 users.append(contentsOf: result)
                 currentPage += 1
             }
+        } catch let error as APIError {
+            switch error {
+            case .invalidURL:
+                DLog.e("Invalid URL error while fetching users.")
+            case .requestFailed(let statusCode, let errorModel):
+                DLog.e("Request failed with status code \(statusCode): \(errorModel?.message ?? "No error message")")
+            case .invalidData:
+                DLog.e("Invalid data received while fetching users.")
+            case .decodingError(let decodingError):
+                DLog.e("Decoding error: \(decodingError)")
+            case .other(let otherError):
+                DLog.e("An unknown error occurred: \(otherError)")
+            }
         } catch {
-            DLog.e("\(error)")
+            DLog.e("Error fetching users: \(error)")
         }
         isLoading = false
     }
@@ -50,8 +63,21 @@ class UsersViewModel: ObservableObject {
                 users.append(contentsOf: result)
                 currentPage += 1
             }
+        } catch let error as APIError {
+            switch error {
+            case .invalidURL:
+                DLog.e("Invalid URL error while refreshing users.")
+            case .requestFailed(let statusCode, let errorModel):
+                DLog.e("Request failed with status code \(statusCode): \(errorModel?.message ?? "No error message")")
+            case .invalidData:
+                DLog.e("Invalid data received while refreshing users.")
+            case .decodingError(let decodingError):
+                DLog.e("Decoding error: \(decodingError)")
+            case .other(let otherError):
+                DLog.e("An unknown error occurred: \(otherError)")
+            }
         } catch {
-            DLog.e("\(error)")
+            DLog.e("Error refreshing users: \(error)")
         }
         isLoading = false
     }

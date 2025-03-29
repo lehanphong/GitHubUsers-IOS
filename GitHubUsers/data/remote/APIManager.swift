@@ -88,7 +88,7 @@ class APIManagerImpl : APIManager {
 
         do {
             let decodedData = try JSONDecoder().decode(T.self, from: data)
-            DLog.d("APIManager \(decodedData)")
+            DLog.i("APIManager \(decodedData)")
             return decodedData
         } catch {
             throw APIError.decodingError(error)
