@@ -32,6 +32,8 @@
 		CCADCDA42D97944300C0A2DA /* MockUserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDA32D97944300C0A2DA /* MockUserDAO.swift */; };
 		CCADCDA92D9794FB00C0A2DA /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDA82D9794FB00C0A2DA /* MockApiManager.swift */; };
 		CCADCDAB2D97981500C0A2DA /* UserRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDAA2D97981500C0A2DA /* UserRepositoryTests.swift */; };
+		CCADCDAF2D97A4DA00C0A2DA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDAE2D97A4DA00C0A2DA /* LoadingView.swift */; };
+		CCADCDB12D97A50900C0A2DA /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADCDB02D97A50900C0A2DA /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		CCADCDA32D97944300C0A2DA /* MockUserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserDAO.swift; sourceTree = "<group>"; };
 		CCADCDA82D9794FB00C0A2DA /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		CCADCDAA2D97981500C0A2DA /* UserRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRepositoryTests.swift; path = GitHubUsersTests/repositories/UserRepositoryTests.swift; sourceTree = SOURCE_ROOT; };
+		CCADCDAE2D97A4DA00C0A2DA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CCADCDB02D97A50900C0A2DA /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				CCADCD952D96F4A100C0A2DA /* DAsyncImage.swift */,
+				CCADCDAE2D97A4DA00C0A2DA /* LoadingView.swift */,
+				CCADCDB02D97A50900C0A2DA /* AvatarView.swift */,
 			);
 			path = customs;
 			sourceTree = "<group>";
@@ -412,9 +418,11 @@
 				CCADCD962D96F4A100C0A2DA /* DAsyncImage.swift in Sources */,
 				CCADCD7A2D96765C00C0A2DA /* APIManager.swift in Sources */,
 				CCADCD802D967D6300C0A2DA /* UserRepository.swift in Sources */,
+				CCADCDB12D97A50900C0A2DA /* AvatarView.swift in Sources */,
 				CCADCD862D967F5800C0A2DA /* UserDAO.swift in Sources */,
 				CCADCD9A2D96F9E200C0A2DA /* DetailUserView.swift in Sources */,
 				CCADCD932D96E78900C0A2DA /* GitHubUsersCoreData.xcdatamodeld in Sources */,
+				CCADCDAF2D97A4DA00C0A2DA /* LoadingView.swift in Sources */,
 				CCADCD872D967F5800C0A2DA /* UserEntity.swift in Sources */,
 				CCADCD8D2D968C1700C0A2DA /* UsersView.swift in Sources */,
 				CCADCD7D2D9676E400C0A2DA /* DLog.swift in Sources */,

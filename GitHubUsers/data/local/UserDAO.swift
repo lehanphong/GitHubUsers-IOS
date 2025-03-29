@@ -23,9 +23,7 @@ class UserDAOImpl: UserDAO {
     func getUsersWithPagination(perPage: Int, since: Int) -> [User] {
         let context = coreDataManager.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<UserEntity>(entityName: "UserEntity")
-        // Calculate the offset based on the page and page size
         fetchRequest.fetchOffset = since
-        // Set the fetch limit (number of items per page)
         fetchRequest.fetchLimit = perPage
         
 //        let sortDescriptor = NSSortDescriptor(key: "id", ascending: true)

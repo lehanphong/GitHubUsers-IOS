@@ -12,6 +12,12 @@ struct UsersView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     ForEach(viewModel.users, id: \.rowId) { user in
+//                        UserRow(user: user)
+//                            .onAppear {
+//                                if user.id == viewModel.users.last?.id, !viewModel.isLoading {
+//                                    viewModel.loadMore()
+//                                }
+//                            }
                         NavigationLink(destination: DetailUserView(viewModel: DetailUserViewModel(userRepository: UserRepositoryImpl(apiManager: APIManagerImpl.shared, userDAO: UserDAOImpl.shared)), username: user.login)) {
                             UserRow(user: user)
                                 .onAppear {
@@ -20,13 +26,10 @@ struct UsersView: View {
                                     }
                                 }
                         }
-                      
                     }
                     
                     if viewModel.isLoading {
-                        ProgressView()
-                            .frame(maxWidth: .infinity, alignment: .center)
-                            .padding()
+                        LoadingView() // Use a dedicated loading view
                     }
                 }
                 .padding(.horizontal)
@@ -35,23 +38,31 @@ struct UsersView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        // Action for back button
-                        // You can use a presentation mode to dismiss the view if needed
-                    }) {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.black)
-                    }
+                    backButton
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        viewModel.refreshUsers()
-                    }) {
-                        Image(systemName: "arrow.clockwise")
-                            .foregroundColor(.black)
-                    }
+                    refreshButton
                 }
             }
+        }
+    }
+    
+    private var backButton: some View {
+        Button(action: {
+            // Action for back button
+            // You can use a presentation mode to dismiss the view if needed
+        }) {
+            Image(systemName: "chevron.left")
+                .foregroundColor(.black)
+        }
+    }
+    
+    private var refreshButton: some View {
+        Button(action: {
+            viewModel.refreshUsers()
+        }) {
+            Image(systemName: "arrow.clockwise")
+                .foregroundColor(.black)
         }
     }
 }
@@ -62,18 +73,7 @@ struct UserRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(spacing: 12) {
-                if let url = URL(string: user.avatarUrl), !user.avatarUrl.isEmpty {
-                    DAsyncImage(url: url)
-                        .frame(width: 96, height: 96)
-                        .clipShape(Circle())
-                        .padding(.all, 4)
-                        .background(Color.gray.opacity(0.1))
-                        .cornerRadius(8)
-                } else {
-                    Color.gray.opacity(0.1)
-                        .frame(width: 84, height: 84)
-                        .clipShape(Circle())
-                }
+                AvatarView(avatarUrl: user.avatarUrl)
                 
                 VStack(alignment: .leading, spacing: 0) {
                     Text(user.login)
@@ -101,7 +101,6 @@ struct UserRow: View {
         .frame(height: 128)
     }
 }
-
 
 
 #Preview {

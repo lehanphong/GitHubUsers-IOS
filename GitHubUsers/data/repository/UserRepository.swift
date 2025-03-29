@@ -18,12 +18,14 @@ class UserRepositoryImpl: UserRepository {
     
     func getUsers(perPage: Int = 20, since: Int = 0) async throws -> [User] {
         let cachedUsers = userDAO.getUsersWithPagination(perPage: perPage, since: since)
-        let allUser = userDAO.getAllUsers()
+//        let all = userDAO.getAllUsers() //for test
         if cachedUsers.isEmpty {
             let users = try await fetchUsersFromAPI(perPage: perPage, since: since)
             userDAO.insertUsers(users)
+            DLog.d("UserRepositoryImpl -> getUsers users -> first: \(users.first?.id ?? -1)")
             return users
         }
+        DLog.d("UserRepositoryImpl -> getUsers cachedUsers -> first: \(cachedUsers.first?.id ?? -1)")
         return cachedUsers
     }
     
